@@ -65,9 +65,13 @@ export default function Home() {
         </div>
         <div id="download" className="mt-8 md:mt-15 flex flex-col gap-5">
           <span className="text-3xl">春音リノをダウンロード</span>
-          <span>
-            手順<br>①ダウンロードしたファイルを解凍します</br><br>解凍したファイルをUTAUにドラックアンドドロップ！</br>
-          </span>
+          <div className="flex flex-col gap-2">
+            <span className="text-xl font-bold">手順</span>
+            <span>
+              ①ダウンロードしたファイルを解凍します<br />
+              ②解凍したファイルをUTAUにドラックアンドドロップ
+            </span>
+          </div>
           <div className="w-full md:w-auto">
             <a href="/harunerino_utau.zip">
               <div className="mb-2 p-2 text-center text-xl bg-blue-500 text-white w-full md:w-65 rounded-sm">UTAU音源のダウンロード</div>
