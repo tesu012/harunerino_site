@@ -1,34 +1,103 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import DownloadPanel from "../components/DownloadPanel";
+
+config.autoAddCss = false;
 
 export default function Home() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const playDemo = async () => {
+    if (!audioRef.current) return;
+    try {
+      audioRef.current.currentTime = 0;
+      await audioRef.current.play();
+    } catch (e) {
+      console.error("Audio play failed:", e);
+    }
+  };
+
   return (
     <main className="relative min-h-screen bg-white">
-      <div className="h-screen w-screen bg-green-100">
-        <div className="absolute left-[10vw] top-0 w-[50vw] h-screen">
-          <div className="relative w-full h-screen">
+      <audio ref={audioRef} src="/demo.wav" preload="auto" />
+      <div className="h-svh w-screen bg-green-100 relative">
+        <div className="relative w-full md:absolute md:left-[10vw] md:top-0 md:w-[50vw] h-screen">
+          <div className="relative w-full h-svh">
             <Image
               src="/harunerino_illust.png"
               alt="春音リノ イラスト"
               fill
+              sizes="50vw"
+              quality={100}
               className="object-cover object-top"
             />
           </div>
         </div>
 
-        <div className="absolute right-[20vw] top-[20vh] w-120">
-          <div className="mb-30">
-            <Image src="/harunerino_logo.png" alt="春音リノ ロゴ" width={800} height={400} />
-            <span className="block mt-8 text-3xl font-bold">心に届く。美味しい歌声</span>
-          </div>
-          <span className="block mt-4 text-3xl">春音リノをダウンロード</span>
-          <div className="mt-6 p-2 text-center bg-blue-500 text-white w-30 rounded-sm">UTAU版</div>
+        <DownloadPanel />
+      </div>
+      <div id="details" className="m-6 md:m-10">
+        <div className="flex flex-col gap-5">
+          <span className="text-3xl">春音リノについて</span>
+          <span>
+            ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+          </span>
+          <span className="text-2xl mt-2">プロフィール</span>
+          <table className="bg-white border border-gray-300 border-collapse [&_th]:p-2 [&_td]:p-2 [&_th]:bg-gray-100 [&_th]:text-left">
+            <tbody>
+              <tr><th className="whitespace-nowrap">名前</th><td>春音リノ（はるねりの）</td></tr>
+              <tr><th className="whitespace-nowrap">性別</th><td>女</td></tr>
+              <tr><th className="whitespace-nowrap">年齢</th><td>45歳</td></tr>
+              <tr><th className="whitespace-nowrap">好きな色</th><td>カーキ色</td></tr>
+              <tr><th className="whitespace-nowrap">生まれた地</th><td>三重県伊勢市</td></tr>
+            </tbody>
+          </table>
+          <Link href="/profile" className="text-right text-blue-500 hover:underline">
+            その他の設定を見る
+          </Link>
         </div>
-
-        <div className="absolute bottom-0 w-full p-5 flex flex-col items-center gap-1.5 bg-linear-to-b from-transparent to-white">
-          <span className="text-3xl">詳しく見る</span>
-          <FontAwesomeIcon icon={faChevronDown} className="w-8" />
+        <div id="download" className="mt-8 md:mt-15 flex flex-col gap-5">
+          <span className="text-3xl">春音リノをダウンロード</span>
+          <span>
+            ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+          </span>
+          <div className="w-full md:w-auto">
+            <a href="/harunerino_utau.zip">
+              <div className="mb-2 p-2 text-center text-xl bg-blue-500 text-white w-full md:w-65 rounded-sm">UTAU音源のダウンロード</div>
+            </a>
+            <a
+              href="https://utau2008.xrea.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-600 underline"
+            >
+              UTAUのダウンロードはこちら
+              <FontAwesomeIcon icon={faUpRightFromSquare} className="ml-1 w-2" />
+            </a>
+          </div>
+          <span className="text-2xl mt-2">デモ音声</span>
+          <div
+            className="flex items-center cursor-pointer w-fit"
+            role="button"
+            tabIndex={0}
+            onClick={playDemo}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") playDemo();
+            }}
+            aria-label="デモ音声を再生"
+          >
+            <div className="w-10 h-10 bg-green-500 flex items-center justify-center rounded-full">
+              <FontAwesomeIcon icon={faPlay} className="w-4 text-white" />
+            </div>
+            <span className="ml-3 text-xl">デモ音声を聞く</span>
+          </div>
         </div>
       </div>
     </main>
