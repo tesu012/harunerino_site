@@ -66,7 +66,7 @@ export default function Home() {
         <div id="download" className="mt-8 md:mt-15 flex flex-col gap-5">
           <span className="text-3xl">春音リノをダウンロード</span>
           <span>
-            ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+            手順<br>①ダウンロードしたファイルを解凍します</br><br>解凍したファイルをUTAUにドラックアンドドロップ！</br>
           </span>
           <div className="w-full md:w-auto">
             <a href="/harunerino_utau.zip">
