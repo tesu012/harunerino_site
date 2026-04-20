@@ -63,15 +63,11 @@ export default function Home() {
             その他の設定を見る
           </Link>
         </div>
-        <div id="download" className="mt-8 md:mt-15 flex flex-col gap-5">
+        <div id="download" className="mt-12 flex flex-col gap-5">
           <span className="text-3xl">春音リノをダウンロード</span>
-          <div className="flex flex-col gap-2">
-            <span className="text-xl font-bold">手順</span>
-            <span>
-              ①ダウンロードしたファイルを解凍します<br />
-              ②解凍したファイルをUTAUにドラックアンドドロップ
-            </span>
-          </div>
+          <span>
+            春音リノはUTAU（飴屋／菖蒲氏による歌声合成ソフト）を使って歌わせることができます。
+          </span>
           <div className="w-full md:w-auto">
             <a href="/harunerino_utau.zip">
               <div className="mb-2 p-2 text-center text-xl bg-blue-500 text-white w-full md:w-65 rounded-sm">UTAU音源のダウンロード</div>
@@ -86,7 +82,17 @@ export default function Home() {
               <FontAwesomeIcon icon={faUpRightFromSquare} className="ml-1 w-2" />
             </a>
           </div>
-          <span className="text-2xl mt-2">デモ音声</span>
+          <div className="flex flex-col gap-2">
+            <span className="text-xl font-bold">音源インストール手順</span>
+            <span>
+              ①ダウンロードしたファイルを解凍します<br />
+              ②解凍したファイルをUTAUにドラックアンドドロップします<br />
+              ③インストールしますか？と表示された場合、「はい」を選択してください<br />
+            </span>
+          </div>
+        </div>
+        <div className="mt-12 flex flex-col gap-5">
+          <span className="text-3xl">デモ音声</span>
           <div
             className="flex items-center cursor-pointer w-fit"
             role="button"
