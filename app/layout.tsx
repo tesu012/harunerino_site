@@ -11,6 +11,9 @@ const mplusrounded1c = M_PLUS_Rounded_1c({
 export const metadata: Metadata = {
   title: "春音リノ公式サイト",
   description: "春音リノの公式サイトです。UTAU音源のダウンロードや、公式設定などを掲載しています。",
+  verification: {
+    google: 'E_sMe61stgFcV9v_CRJdia6zpxz8H3z7tnWdR_GZuMk',
+  },
 };
 
 export default function RootLayout({
