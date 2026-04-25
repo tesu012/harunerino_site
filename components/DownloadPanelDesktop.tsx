@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 export default function DownloadPanelDesktop() {
   return (
@@ -13,6 +15,14 @@ export default function DownloadPanelDesktop() {
             <Image src="/harunerino_logo.png" alt="春音リノ ロゴ" width={800} height={400} />
           </div>
           <span className="block mt-4 md:mt-8 text-2xl md:text-3xl font-bold">心に届く。美味しい歌声</span>
+          <div className="mt-5 flex items-center gap-4">
+            <a href="https://x.com/harunerino" target="_blank" rel="noopener noreferrer" aria-label="X（旧Twitter）を見る">
+              <FontAwesomeIcon icon={faXTwitter} className="text-3xl" />
+            </a>
+            <a href="https://www.youtube.com/channel/UCeQNt6VOcf4965Jg2yXO8QQ" target="_blank" rel="noopener noreferrer" aria-label="YouTubeチャンネルを見る">
+              <FontAwesomeIcon icon={faYoutube} className="text-3xl" />
+            </a>
+          </div>
         </div>
         <span className="block mt-4 text-xl md:text-3xl">春音リノをダウンロード</span>
         <a href="#download">

@@ -5,6 +5,8 @@ import Image from "next/image";
 import { createPortal } from "react-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 export default function DownloadPanelMobile() {
   const [mounted] = useState<boolean>(() => typeof window !== "undefined");
@@ -21,6 +23,14 @@ export default function DownloadPanelMobile() {
                 <Image src="/harunerino_logo.png" alt="春音リノ ロゴ" width={260} height={80} />
               </div>
               <span className="mt-2 text-lg font-bold">心に届く。美味しい歌声</span>
+              <div className="mt-2 flex items-center gap-5">
+                <a href="https://x.com/harunerino" target="_blank" rel="noopener noreferrer" aria-label="X（旧Twitter）を見る">
+                  <FontAwesomeIcon icon={faXTwitter} className="text-3xl" />
+                </a>
+                <a href="https://www.youtube.com/channel/UCeQNt6VOcf4965Jg2yXO8QQ" target="_blank" rel="noopener noreferrer" aria-label="YouTubeチャンネルを見る">
+                  <FontAwesomeIcon icon={faYoutube} className="text-3xl" />
+                </a>
+              </div>
             </div>
           </div>
           <div className="mt-2">
