@@ -69,7 +69,7 @@ export default function Home() {
             春音リノはUTAU（飴屋／菖蒲氏による歌声合成ソフト）を使って歌わせることができます。
           </span>
           <div className="w-full md:w-auto">
-            <a href="/harunerino_utau.zip">
+            <a href="/api/download">
               <div className="mb-2 p-2 text-center text-xl bg-blue-500 text-white w-full md:w-65 rounded-sm">UTAU音源のダウンロード</div>
             </a>
             <a
