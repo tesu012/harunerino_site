@@ -8,6 +8,7 @@ import { faPlay, faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import DownloadPanel from "../components/DownloadPanel";
+import { UTAU_VERSION } from "@/lib/sound_source_version";
 
 config.autoAddCss = false;
 
@@ -68,10 +69,11 @@ export default function Home() {
           <span>
             春音リノはUTAU（飴屋／菖蒲氏による歌声合成ソフト）を使って歌わせることができます。
           </span>
-          <div className="w-full md:w-auto">
+          <div className="w-full md:w-auto flex flex-col">
             <a href="/api/download">
               <div className="mb-2 p-2 text-center text-xl bg-blue-500 text-white w-full md:w-65 rounded-sm">UTAU音源のダウンロード</div>
             </a>
+            <span className="mb-3">バージョン {UTAU_VERSION}</span>
             <a
               href="https://utau2008.xrea.jp/"
               target="_blank"
