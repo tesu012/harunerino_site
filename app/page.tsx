@@ -85,9 +85,8 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <span className="text-xl font-bold">音源インストール手順</span>
             <span>
-              ①ダウンロードしたファイルを解凍します<br />
-              ②解凍したファイルをUTAUにドラックアンドドロップします<br />
-              ③インストールしますか？と表示された場合、「はい」を選択してください<br />
+              1. ダウンロードしたファイルを<strong>解凍せずに</strong>、UTAUにドラックアンドドロップします。<br />
+              2. インストールしますか？と表示された場合、「はい」を選択してください。
             </span>
           </div>
         </div>
