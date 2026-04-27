@@ -37,7 +37,7 @@ export default function Home() {
               fill
               sizes="50vw"
               quality={100}
-              className="object-cover object-top"
+              className="object-cover object-top pt-5 pl-16 md:pl-0"
             />
           </div>
         </div>
