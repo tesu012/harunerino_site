@@ -66,17 +66,8 @@ export default function Home() {
         </div>
         <div id="download" className="mt-12 flex flex-col gap-5">
           <span className="text-3xl">春音リノをダウンロード</span>
-          <span className="flex flex-col">
+          <span className="flex flex-col gap-2">
             春音リノはUTAU（飴屋／菖蒲氏による歌声合成ソフト）を使って歌わせることができます。
-            <Link href="/all-versions" className="text-sm text-blue-600 underline mt-2">
-              全てのバージョンを見る（最新バージョンの使用をおすすめします）
-            </Link>
-          </span>
-          <div className="w-full md:w-auto flex flex-col">
-            <a href="/api/download">
-              <div className="mb-2 p-2 text-center text-xl bg-blue-500 text-white w-full md:w-65 rounded-sm">UTAU音源のダウンロード</div>
-            </a>
-            <span className="mb-3">バージョン {UTAU_VERSIONS[0].version} （最新版）</span>
             <a
               href="https://utau2008.xrea.jp/"
               target="_blank"
@@ -86,6 +77,15 @@ export default function Home() {
               UTAUのダウンロードはこちら
               <FontAwesomeIcon icon={faUpRightFromSquare} className="ml-1 w-2" />
             </a>
+          </span>
+          <div className="w-full md:w-auto flex flex-col">
+            <a href="/api/download">
+              <div className="mb-1 p-2 text-center text-xl bg-blue-500 text-white w-full md:w-65 rounded-sm">UTAU音源のダウンロード</div>
+            </a>
+            <span className="mb-3">バージョン {UTAU_VERSIONS[0].version} （最新版）</span>
+            <Link href="/all-versions" className="text-blue-600 underline">
+              全てのバージョンを見る（最新バージョンの使用をおすすめします）
+            </Link>
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-xl font-bold">音源インストール手順</span>
